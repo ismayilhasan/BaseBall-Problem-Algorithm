@@ -24,7 +24,7 @@ function ShowScore(operationArray)
          if(scoreArray.length < 2 && operation === '+')
          {
             alert("There must be at least two points for this operation")
-            break
+            break;
          } 
 
          // Adding Score
@@ -51,7 +51,10 @@ function ShowScore(operationArray)
         {
            scoreArray.push(Number(scoreArray[scoreArray.length-1]) + Number(scoreArray[scoreArray.length-2]) )
         }
-
+        else{
+            alert("invalid operation")
+            break
+        }
        
 
     }
@@ -64,7 +67,7 @@ function ShowScore(operationArray)
     // Returing Values
     return `
     Sum of the scores is ${totalSum} 
-    // and Scores : ${scoreArray.length?scoreArray:"[empty]"}
+    and Scores : ${scoreArray.length?scoreArray:"[empty]"}
     `
 
 }
